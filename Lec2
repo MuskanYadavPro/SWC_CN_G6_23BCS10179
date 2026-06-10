@@ -1,0 +1,131 @@
+CDN (Content Delivery Network)
+
+A Content Delivery Network (CDN) is a group of distributed servers located across multiple geographic regions that work together to deliver web content faster and more efficiently. Instead of retrieving data from a single origin server for every request, users receive content from the CDN server nearest to their location.
+
+This approach reduces latency, improves website loading speed, enhances user experience, and decreases the workload on the origin server.
+
+CDNs are widely used to deliver static assets such as images, videos, JavaScript files, CSS files, and downloadable content. Major websites, streaming services, and online platforms rely on CDNs to ensure fast and reliable content delivery worldwide.
+
+Push CDN
+
+In a Push CDN, content is proactively uploaded from the origin server to CDN edge servers. The website owner is responsible for pushing new or updated content to the CDN whenever changes occur.
+
+Once the content is stored on CDN servers, user requests are served directly from those servers without contacting the origin server.
+
+Push CDNs are ideal for large static files that change infrequently, such as video libraries, software packages, documents, and image repositories.
+
+Advantages
+Faster content delivery
+Reduced load on the origin server
+Greater control over cached content
+Disadvantages
+Manual content management
+Additional storage requirements on CDN servers
+Pull CDN
+
+In a Pull CDN, content is retrieved automatically from the origin server when it is requested for the first time.
+
+If the requested file is not available in the CDN cache, the CDN fetches it from the origin server, stores a copy locally, and delivers it to the user. Future requests for the same content are then served directly from the CDN cache.
+
+Because content is fetched automatically, Pull CDNs require minimal maintenance and are widely used by modern websites.
+
+Advantages
+Easy to manage
+Automatic content synchronization
+No manual uploads required
+Disadvantages
+Initial requests may experience slightly higher latency
+Cache expiration policies must be managed carefully
+Proxy Server
+
+A Proxy Server acts as an intermediary between a client and a destination server. Instead of connecting directly to the target server, the client sends requests to the proxy server, which forwards them on the client's behalf.
+
+Proxy servers are commonly used for security, privacy, traffic monitoring, content filtering, and caching.
+
+By routing requests through a proxy, organizations can control internet access, monitor network activity, and improve performance by caching frequently accessed resources.
+
+Common Uses
+Hiding a user's IP address
+Filtering web content
+Monitoring internet usage
+Improving performance through caching
+Bypassing geographic restrictions
+Types of Proxy Servers
+Forward Proxy – Represents the client and forwards requests to external servers.
+Reverse Proxy – Represents the server and handles incoming client requests.
+Transparent Proxy – Operates without requiring client configuration.
+Anonymous Proxy – Conceals the client's identity from destination servers.
+DORA Process
+
+DORA is the four-step communication process used by DHCP to automatically assign an IP address to a device joining a network.
+
+The acronym stands for:
+
+1. Discover
+
+The client broadcasts a DHCP Discover message to locate available DHCP servers because it does not yet have an IP address.
+
+2. Offer
+
+One or more DHCP servers respond with a DHCP Offer message containing an available IP address and other network settings such as:
+
+Subnet Mask
+Default Gateway
+DNS Server Addresses
+3. Request
+
+The client broadcasts a DHCP Request message indicating which offered IP address it wants to use.
+
+4. Acknowledge (ACK)
+
+The selected DHCP server sends a DHCP Acknowledgment (ACK) confirming the IP address lease and providing the final configuration details.
+
+After receiving the ACK message, the client can begin normal network communication.
+
+The DORA process automates network configuration and eliminates the need for manual IP address assignment.
+
+DHCP (Dynamic Host Configuration Protocol)
+
+Dynamic Host Configuration Protocol (DHCP) is a network protocol that automatically assigns IP addresses and other network configuration settings to devices connected to a network.
+
+Without DHCP, administrators would need to manually configure every device with:
+
+IP Address
+Subnet Mask
+Default Gateway
+DNS Server Information
+
+DHCP simplifies network administration by dynamically assigning these settings from a predefined pool of available addresses.
+
+When a device connects to the network, it obtains its configuration through the DORA process. The assigned IP address is leased for a specific period, after which it can be renewed or reassigned.
+
+Benefits of DHCP
+Reduces administrative workload
+Minimizes configuration errors
+Ensures efficient IP address utilization
+Simplifies network management
+DHCP Ports
+UDP Port 67 – DHCP Server
+UDP Port 68 – DHCP Client
+
+DHCP is commonly used in home, educational, business, and enterprise networks.
+
+APIPA (Automatic Private IP Addressing)
+
+Automatic Private IP Addressing (APIPA) is a fallback mechanism used when a device cannot obtain an IP address from a DHCP server.
+
+If DHCP assignment fails, the device automatically assigns itself an address from the range:
+
+169.254.0.1 – 169.254.255.254
+
+This allows communication with other devices on the same local network that also have APIPA addresses.
+
+However, APIPA addresses only support limited local communication and do not provide access to external networks or the internet.
+
+Key Points
+Activated when DHCP is unavailable
+Uses the range 169.254.0.0/16
+Enables local network communication only
+Commonly indicates a DHCP-related issue
+
+Network administrators often view an APIPA address as a troubleshooting clue that a device was unable to contact a DHCP server successfully.
