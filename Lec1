@@ -1,0 +1,191 @@
+# Computer Networks
+
+A **Computer Network** is a collection of interconnected devices that communicate and share resources such as files, printers, applications, and internet access. Networks can range from small setups within homes or offices to large-scale global networks like the Internet.
+
+Computer networks are essential for modern communication, enabling efficient data exchange, resource sharing, collaboration, and access to information across different locations.
+
+### Benefits of Computer Networks
+
+* Resource sharing
+* Faster communication
+* Centralized data management
+* Improved collaboration
+* Cost efficiency
+
+---
+
+# Switches
+
+A **Switch** is a networking device used to connect multiple devices within a **Local Area Network (LAN)**. It receives data from one device and forwards it only to the intended recipient using **MAC (Media Access Control) addresses**.
+
+Unlike a hub, which broadcasts data to all connected devices, a switch intelligently sends data only to the target device. This reduces network congestion, minimizes unnecessary traffic, and improves overall performance.
+
+### Key Features
+
+* Operates primarily at **OSI Layer 2 (Data Link Layer)**
+* Uses MAC addresses for forwarding decisions
+* Enhances network efficiency and security
+* Supports full-duplex communication
+
+---
+
+# Routers
+
+A **Router** is a networking device that connects different networks and directs data packets between them. It uses **IP addresses** to determine the most efficient path for transmitting data from a source network to a destination network.
+
+Routers are commonly used to connect local networks to the Internet and facilitate communication between separate networks.
+
+### Key Features
+
+* Operates at **OSI Layer 3 (Network Layer)**
+* Routes packets using IP addresses
+* Connects multiple networks
+* Often provides additional services such as:
+
+  * Network Address Translation (NAT)
+  * Firewall protection
+  * Wireless connectivity (Wi-Fi)
+  * Traffic management
+
+---
+
+# Servers
+
+A **Server** is a computer system or software application that provides services, resources, or data to other devices known as **clients**.
+
+Servers are designed to handle multiple client requests simultaneously and play a critical role in modern computing environments.
+
+### Common Types of Servers
+
+* **Web Server** – Hosts websites and web applications
+* **Database Server** – Stores and manages databases
+* **File Server** – Provides centralized file storage
+* **Mail Server** – Manages email communication
+* **Application Server** – Runs business applications
+
+Servers ensure reliable access to shared resources and support communication across networks.
+
+---
+
+# OSI Model
+
+The **Open Systems Interconnection (OSI) Model** is a standardized framework used to understand and describe how data is transmitted across a network.
+
+It divides the communication process into seven distinct layers, with each layer performing specific functions. This layered architecture simplifies network design, troubleshooting, and interoperability between devices from different manufacturers.
+
+### Advantages of the OSI Model
+
+* Standardizes network communication
+* Simplifies troubleshooting
+* Encourages interoperability
+* Separates networking functions into manageable layers
+
+---
+
+# OSI Model Layers
+
+The OSI Model consists of **seven layers**, arranged from the user-facing application layer to the physical transmission medium.
+
+| Layer | Name               | Function                                                      |
+| ----- | ------------------ | ------------------------------------------------------------- |
+| 7     | Application Layer  | Provides network services to end-user applications            |
+| 6     | Presentation Layer | Handles data formatting, encryption, and compression          |
+| 5     | Session Layer      | Establishes, manages, and terminates communication sessions   |
+| 4     | Transport Layer    | Ensures reliable end-to-end data delivery using TCP/UDP       |
+| 3     | Network Layer      | Handles logical addressing and routing using IP               |
+| 2     | Data Link Layer    | Manages frame transmission and MAC addressing                 |
+| 1     | Physical Layer     | Transmits raw bits through cables, fiber, or wireless signals |
+
+### Easy Mnemonic
+
+**Top to Bottom (7 → 1):**
+
+**A**ll **P**eople **S**eem **T**o **N**eed **D**ata **P**rocessing
+
+(Application → Presentation → Session → Transport → Network → Data Link → Physical)
+
+---
+
+# DNS (Domain Name System)
+
+The **Domain Name System (DNS)** acts as the Internet's directory service or "phonebook."
+
+Humans prefer using easy-to-remember domain names such as **google.com**, while computers communicate using numerical IP addresses. DNS translates domain names into corresponding IP addresses, allowing users to access websites without memorizing complex numbers.
+
+### How DNS Works
+
+1. User enters a domain name in a browser.
+2. DNS servers search for the corresponding IP address.
+3. The IP address is returned to the browser.
+4. The browser connects to the destination server.
+
+### Example
+
+**google.com → 142.250.xxx.xxx**
+
+Without DNS, users would need to remember IP addresses for every website they visit.
+
+---
+
+# HTTP and HTTPS
+
+## HTTP (HyperText Transfer Protocol)
+
+**HTTP** is the standard protocol used for communication between web browsers and web servers. It follows a **request-response** model, where a browser sends a request and the server responds with the requested resource.
+
+However, HTTP transmits data in plain text, making it vulnerable to eavesdropping and data interception.
+
+### Characteristics
+
+* Unencrypted communication
+* Faster due to minimal overhead
+* Uses **Port 80**
+* Not recommended for sensitive information
+
+---
+
+## HTTPS (HyperText Transfer Protocol Secure)
+
+**HTTPS** is the secure version of HTTP that protects data using **SSL/TLS encryption**.
+
+Encryption ensures that information exchanged between the browser and server remains confidential and cannot be easily intercepted or altered by unauthorized parties.
+
+### Characteristics
+
+* Encrypted communication
+* Uses SSL/TLS certificates
+* Protects sensitive data
+* Uses **Port 443**
+* Provides authentication, confidentiality, and data integrity
+
+### Benefits of HTTPS
+
+* Secures passwords and payment information
+* Prevents data tampering
+* Builds user trust
+* Improves website security
+
+---
+
+# HTTP vs HTTPS
+
+| Feature         | HTTP                        | HTTPS                                    |
+| --------------- | --------------------------- | ---------------------------------------- |
+| Full Form       | HyperText Transfer Protocol | HyperText Transfer Protocol Secure       |
+| Security        | Not Secure                  | Secure                                   |
+| Encryption      | No                          | Yes (SSL/TLS)                            |
+| Port Number     | 80                          | 443                                      |
+| Data Protection | No                          | Yes                                      |
+| Suitable For    | Public information          | Sensitive transactions and login systems |
+
+---
+
+### Quick Interview Summary
+
+* **Switch:** Connects devices within a LAN using MAC addresses.
+* **Router:** Connects different networks using IP addresses.
+* **Server:** Provides services and resources to clients.
+* **OSI Model:** Seven-layer framework for network communication.
+* **DNS:** Converts domain names into IP addresses.
+* **HTTP:** Unsecured web communication protocol (Port 80).
+* **HTTPS:** Secure web communication protocol using SSL/TLS (Port 443).
